@@ -1,0 +1,12 @@
+config:
+  credentials: []
+  project_repos: {}
+environment: {}
+sqa_criteria:
+  qc_style:
+    repos:
+      this_repo:
+        commands:
+        - hadolint ./QC.Lic/licensee/Dockerfile
+        container: hadolint
+timeout: 600
