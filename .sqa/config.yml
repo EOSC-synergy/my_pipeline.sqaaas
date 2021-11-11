@@ -9,4 +9,10 @@ sqa_criteria:
         commands:
         - hadolint ./QC.Lic/licensee/Dockerfile
         container: hadolint
+  qc_doc:
+    repos:
+      this_repo:
+        commands:
+        - echo "hola"
+        container: hadolint
 timeout: 600
