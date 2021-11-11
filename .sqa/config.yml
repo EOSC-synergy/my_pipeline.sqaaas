@@ -1,7 +1,8 @@
 config:
   credentials: []
   project_repos: {}
-environment: {}
+environment:
+  JPL_KEEPGOING: "my_pipeline"
 sqa_criteria:
   qc_style:
     repos:
