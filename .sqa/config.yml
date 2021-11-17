@@ -14,6 +14,6 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - echo "hola"
+        - hadolint ./QC.Lic/licensee/Dockerfile --ignore DL3008,DL3015,DL3028
         container: hadolint
 timeout: 600
