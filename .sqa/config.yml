@@ -1,61 +1,21 @@
 config:
+  credentials: []
   project_repos:
-    o3api:
-      repo: 'https://git.scc.kit.edu/synergy.o3as/o3api.git'
-      branch: master
-  credentials:
-    - id: o3as-dockerhub-vykozlov
-      username_var: JPL_DOCKERUSER
-      password_var: JPL_DOCKERPASS
-
-environment:
-  JPL_DOCKERPUSH: "o3api"
-  JPL_DOCKERFORCEBUILD: "True"
-  LANG: C.UTF-8
-  O3API_DOCKER_TAG: "latest"
-  O3API_UPDATE_DATE: 210830_1920
-
+    github.com/EOSC-synergy/sqa-composer-templates:
+      branch: feature/dynamic_tool_gathering
+      repo: https://github.com/EOSC-synergy/sqa-composer-templates
+environment: {}
 sqa_criteria:
-  qc_style:
+  QC.Sty:
     repos:
-      o3api:
-        container: o3api-testing
-        tox:
-          tox_file: /o3api-testing/tox.ini
-          testenv:
-            - pep8
-  qc_coverage:
+      this_repo:
+        commands:
+        - tox -c tox.ini -e pep8
+        container: qc.sty_crabby-jade-mongrel
+  QC.Uni:
     repos:
-      o3api:
-        container: o3api-testing
-        tox:
-          tox_file: /o3api-testing/tox.ini
-          testenv: 
-            - unittest
-  qc_functional:
-    repos:
-      o3api:
-        container: o3api-testing
-        tox:
-          tox_file: /o3api-testing/tox.ini
-          testenv: 
-            - func-api
-            - cobertura
-  qc_security:
-    repos:
-      o3api:
-        container: o3api-testing
-        tox:
-          tox_file: /o3api-testing/tox.ini
-          testenv:
-            - bandit
-  qc_doc:
-    repos:
-      o3api:
-        container: o3api-testing
-        tox:
-          tox_file: /o3api-testing/tox.ini
-          testenv:
-            - doc-sphinx
-
-timeout: 900
+      this_repo:
+        commands:
+        - tox -c tox.ini -e unittest
+        container: qc.uni_sleepy-buff-burmese
+timeout: 600
