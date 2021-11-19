@@ -11,6 +11,7 @@ sqa_criteria:
       this_repo:
         commands:
         - tox -c tox.ini -e pep8
+        - cat flake8.log
         container: qc.sty_crabby-jade-mongrel
   QC.Uni:
     repos:
