@@ -1,20 +1,26 @@
-version: "3.7"
-
 services:
   o3api-testing:
-    image: "indigodatacloud/ci-images:python3.6"
-    container_name: "o3api-testing"
-    hostname: "o3api-testing"
+    command: sleep 6000000
+    image: indigodatacloud/ci-images:python3.6
     volumes:
-     - type: bind
-       source: ./o3api
-       target: /o3api-testing
-
-  o3api:
-     build:
-        context: "."
-        dockerfile: "./o3api/docker/Dockerfile"
-        args:
-          branch: ${GIT_BRANCH}
-          api_date: ${O3API_UPDATE_DATE}
-     image: "o3as/o3api:${O3API_DOCKER_TAG}"
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+  qc.sty_crabby-jade-mongrel:
+    command: sleep 6000000
+    image: painless/tox
+    volumes:
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+  qc.uni_sleepy-buff-burmese:
+    command: sleep 6000000
+    image: painless/tox
+    volumes:
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+version: '3.7'
