@@ -1,6 +1,4 @@
-#!/usr/bin/groovy
-
-@Library(['github.com/indigo-dc/jenkins-pipeline-library@release/2.1.0']) _
+@Library(['github.com/indigo-dc/jenkins-pipeline-library@stable/2.1.0']) _
 
 def projectConfig
 
@@ -8,18 +6,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Update config.yml') {
-           steps {
-                script {
-                    // update config.yml for Jenkins_ID
-                    sh "bash .sqa/update-config-yml"
-                }
-           }
-        }
-        stage('SQA baseline dynamic stages') {
+        stage('SQA baseline criterion: QC.Sty & QC.Uni') {
             steps {
                 script {
-                    projectConfig = pipelineConfig()
+                    projectConfig = pipelineConfig(
+                        configFile: '.sqa/config.yml',
+                        scmConfigs: [ localBranch: true ],
+                        validatorDockerImage: 'eoscsynergy/jpl-validator:1.2.0'
+                    )
                     buildStages(projectConfig)
                 }
             }
