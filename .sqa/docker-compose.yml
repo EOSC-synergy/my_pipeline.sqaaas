@@ -1,5 +1,5 @@
 services:
-  hadolint:
+  qc.sty_skinny-periwinkle-ray:
     command: sleep 6000000
     image: hadolint/hadolint:latest-alpine
     volumes:
