@@ -1,23 +1,7 @@
 services:
-  o3api-testing:
+  qc.sty_geeky-cobalt-frise:
     command: sleep 6000000
-    image: indigodatacloud/ci-images:python3.6
-    volumes:
-    - source: ./
-      target: /sqaaas-build
-      type: bind
-    working_dir: /sqaaas-build
-  qc.sty_crabby-jade-mongrel:
-    command: sleep 6000000
-    image: painless/tox
-    volumes:
-    - source: ./
-      target: /sqaaas-build
-      type: bind
-    working_dir: /sqaaas-build
-  qc.uni_sleepy-buff-burmese:
-    command: sleep 6000000
-    image: painless/tox
+    image: hadolint/hadolint:latest-alpine
     volumes:
     - source: ./
       target: /sqaaas-build
