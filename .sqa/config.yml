@@ -1,22 +1,15 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/sqa-composer-templates:
-      branch: feature/dynamic_tool_gathering
-      repo: https://github.com/EOSC-synergy/sqa-composer-templates
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: staging
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment: {}
 sqa_criteria:
   QC.Sty:
     repos:
       this_repo:
         commands:
-        - tox -c tox.ini -e pep8
-        - cat flake8.log
-        container: qc.sty_crabby-jade-mongrel
-  QC.Uni:
-    repos:
-      this_repo:
-        commands:
-        - tox -c tox.ini -e unittest
-        container: qc.uni_sleepy-buff-burmese
+        - hadolint docker/Dockerfile
+        container: qc.sty_geeky-cobalt-frise
 timeout: 600
