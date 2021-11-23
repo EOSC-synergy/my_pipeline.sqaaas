@@ -10,6 +10,6 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - hadolint docker/Dockerfile
-        container: qc.sty_geeky-cobalt-frise
+        - pycodestyle .
+        container: qc.sty_trippy-ultramarine-panda
 timeout: 600
