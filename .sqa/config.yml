@@ -1,19 +1,15 @@
 config:
   credentials: []
-  project_repos: {}
-environment:
-  JPL_KEEPGOING: "my_pipeline"
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: staging
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment: {}
 sqa_criteria:
-  qc_style:
+  QC.Sty:
     repos:
       this_repo:
         commands:
-        - hadolint ./QC.Lic/licensee/Dockerfile
-        container: hadolint
-  qc_doc:
-    repos:
-      this_repo:
-        commands:
-        - hadolint ./QC.Lic/licensee/Dockerfile --ignore DL3008 --ignore DL3015 --ignore DL3028
-        container: hadolint
+        - hadolint Dockerfile
+        container: qc.sty_skinny-periwinkle-ray
 timeout: 600
