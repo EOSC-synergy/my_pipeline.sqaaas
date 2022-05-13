@@ -1,0 +1,18 @@
+config:
+  credentials:
+  - id: kubernetes-cluster
+  - variable: KUBECONFIG
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.6.0-alpha4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+sqa_criteria:
+  SvcQC.Dep:
+    repos:
+      this_repo:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-cinnamon-falcon.sh
+        container: svcqc.dep_goopy-crimson-beagle
+timeout: 600
