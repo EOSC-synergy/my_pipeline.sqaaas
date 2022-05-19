@@ -1,0 +1,16 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.6.0-alpha5
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+sqa_criteria:
+  QC.Lic:
+    repos:
+      this_repo:
+        commands:
+        - licensee detect . --json
+        container: qc.lic_chewy-rose-gorilla
+timeout: 600
