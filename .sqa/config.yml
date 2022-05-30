@@ -2,22 +2,15 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.1.0
+      branch: release/1.7.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
-  JPL_KEEPGOING: enabled
 sqa_criteria:
-  QC.Sec:
+  SvcQC.Dep:
     repos:
       this_repo:
         commands:
-        - bandit --recursive .
-        container: qc.sec_cozy-cyan-iguana
-  QC.Sty:
-    repos:
-      this_repo:
-        commands:
-        - flake8 qc_*
-        container: flake8-service
+        - /usr/bin/env sh .sqa/script.wimpy-zucchini-husky.sh
+        container: svcqc.dep_grumpy-indigo-insect
 timeout: 600
