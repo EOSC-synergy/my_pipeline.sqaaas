@@ -5,8 +5,14 @@ type = InfrastructureManager; username = %s; password = %q
 # OpenStack site using standard user, password, tenant format
 id = incd; type = OpenStack; host = https://stratus.ncg.ingrid.pt:5000; username = %s; password = %q; tenant = None; domain = default; auth_version = 3.x_password
 EOF
+echo "*********"
+cat /im/auth.dat
+echo "*********"
 printf "$(cat /im/auth.dat)" "${IM_USER}" "${IM_PASS}" "${OPENSTACK_USER}" "${OPENSTACK_PASS}" > /im/auth.dat
 echo "Generated auth.dat file:"
+echo "*********"
+cat /im/auth.dat
+echo "*********"
 ls -l /im/auth.dat
 printf "$(cat )" "https://stratus.ncg.ingrid.pt" "" > /im/test-ost.tosca
 echo "Printing tosca file"
