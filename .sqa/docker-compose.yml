@@ -1,6 +1,8 @@
 services:
-  svcqc.dep_gamy-cinnamon-reindeer:
-    entrypoint: [/bin/sleep, infinity]
+  svcqc.dep_crappy-cerulean-kiwi:
+    entrypoint:
+    - /bin/sleep
+    - infinity
     environment:
     - OPENSTACK_USER
     - OPENSTACK_PASS
