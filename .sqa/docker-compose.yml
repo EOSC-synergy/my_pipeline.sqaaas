@@ -1,6 +1,6 @@
 services:
   svcqc.dep_gamy-cinnamon-reindeer:
-    entrypoint: '[/bin/sleep, infinity]'
+    entrypoint: [/bin/sleep, infinity]
     environment:
     - OPENSTACK_USER
     - OPENSTACK_PASS
