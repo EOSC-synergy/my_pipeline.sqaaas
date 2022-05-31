@@ -1,4 +1,4 @@
-(printf "$(cat /im/auth/auth.dat)" "${IM_USER}" "${IM_PASS}" incd "https://stratus.ncg.ingrid.pt:5000" "${OPENSTACK_USER}" "${OPENSTACK_PASS}" eosc-synergy default 3.x_password > /im/auth/auth.dat
+(printf "$(cat /im/auth/auth.dat)" "${IM_USER}" "${IM_PASS}" incd "https://stratus.ncg.ingrid.pt:5000" "${OPENSTACK_USER}" "${OPENSTACK_PASS}" None default 3.x_password > /im/auth/auth.dat
 echo "Generated auth.dat file:"
 ls -l /im/auth/auth.dat
 printf "$(cat )" "https://stratus.ncg.ingrid.pt" "" > /im/test-ost.tosca

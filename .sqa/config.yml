@@ -11,6 +11,6 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-zucchini-husky.sh
-        container: svcqc.dep_grumpy-indigo-insect
+        - /usr/bin/env sh .sqa/script.pokey-chartreuse-markhor.sh
+        container: svcqc.dep_gummy-mustard-markhor
 timeout: 600

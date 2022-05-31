@@ -1,6 +1,11 @@
 services:
-  svcqc.dep_grumpy-indigo-insect:
-    command: sleep 6000000
+  svcqc.dep_gummy-mustard-markhor:
+    entrypoint: '[/bin/sleep, infinity]'
+    environment:
+    - OPENSTACK_USER
+    - OPENSTACK_PASS
+    - IM_USER
+    - IM_PASS
     image: grycap/im-client:ec3
     volumes:
     - source: ./
