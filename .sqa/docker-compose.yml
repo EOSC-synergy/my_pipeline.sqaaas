@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_crappy-cerulean-kiwi:
+  svcqc.dep_shabby-pear-uguisu:
     entrypoint:
     - /bin/sleep
     - infinity
