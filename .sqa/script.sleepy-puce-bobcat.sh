@@ -9,9 +9,11 @@ if [ -z "$IM_USER" ] || [ -z "$IM_PASS" ] || [ -z "$OPENSTACK_USER" ] || [ -z "$
   echo 'One or more credential variables are undefined (required: IM_USER, IM_PASS, OPENSTACK_USER, OPENSTACK_PASS)'
   exit 1
 fi
+echo "******" ; cat /im/auth.dat ; echo "******"
 printf "$(cat /im/auth.dat)" "${IM_USER}" "${IM_PASS}" "${OPENSTACK_USER}" "${OPENSTACK_PASS}" > /im/auth.dat
 echo "Generated auth.dat file:"
 ls -l /im/auth.dat
+echo "******" ; cat /im/auth.dat ; echo "******"
 printf "$(cat tosca.radl)" "https://stratus.ncg.ingrid.pt" "" > /im/test-ost.radl
 echo "Printing radl file"
 cat /im/test-ost.radl
