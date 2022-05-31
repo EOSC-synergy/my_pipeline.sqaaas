@@ -1,20 +1,18 @@
 (mkdir /im
 cat <<EOF >> /im/auth.dat
 # InfrastructureManager auth
-type = InfrastructureManager; username = %s; password = %q
+type = InfrastructureManager; username = %s; password = %s
 # OpenStack site using standard user, password, tenant format
-id = incd; type = OpenStack; host = https://stratus.ncg.ingrid.pt:5000; username = %s; password = %q; tenant = None; domain = default; auth_version = 3.x_password
+id = incd; type = OpenStack; host = https://stratus.ncg.ingrid.pt:5000; username = %s; password = %s; tenant = eosc-synergy; domain = default; auth_version = 3.x_password
 EOF
 if [ -z "$IM_USER" ] || [ -z "$IM_PASS" ] || [ -z "$OPENSTACK_USER" ] || [ -z "$OPENSTACK_PASS" ]; then
   echo 'One or more credential variables are undefined (required: IM_USER, IM_PASS, OPENSTACK_USER, OPENSTACK_PASS)'
   exit 1
 fi
-echo "******" ; cat /im/auth.dat ; echo "******"
 printf "$(cat /im/auth.dat)" "${IM_USER}" "${IM_PASS}" "${OPENSTACK_USER}" "${OPENSTACK_PASS}" > /im/auth.dat
 echo "Generated auth.dat file:"
 ls -l /im/auth.dat
-echo "******" ; cat /im/auth.dat ; echo "******"
-printf "$(cat tosca.radl)" "https://stratus.ncg.ingrid.pt" "" > /im/test-ost.radl
+printf "$(cat test.radl)" "https://stratus.ncg.ingrid.pt" "" > /im/test-ost.radl
 echo "Printing radl file"
 cat /im/test-ost.radl
 echo

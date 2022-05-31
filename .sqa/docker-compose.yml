@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_shabby-pear-uguisu:
+  svcqc.dep_jumpy-copper-fossa:
     entrypoint:
     - /bin/sleep
     - infinity
