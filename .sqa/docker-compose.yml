@@ -1,6 +1,6 @@
 services:
   svcqc.dep_gummy-mustard-markhor:
-    entrypoint: '[/bin/sleep, infinity]'
+    entrypoint: [/bin/sleep, infinity]
     environment:
     - OPENSTACK_USER
     - OPENSTACK_PASS
