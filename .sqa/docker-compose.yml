@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_jumpy-copper-fossa:
+  svcqc.dep_homey-cinnabar-civet:
     entrypoint:
     - /bin/sleep
     - infinity

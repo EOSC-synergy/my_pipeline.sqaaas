@@ -10,13 +10,16 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/orviz/IM-sqaaas-test:
+      branch: master
+      repo: https://github.com/orviz/IM-sqaaas-test
 environment:
   JPL_DOCKERFORCEBUILD: enabled
 sqa_criteria:
   SvcQC.Dep:
     repos:
-      this_repo:
+      github.com/orviz/IM-sqaaas-test im_client:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-tangerine-bullfrog.sh
-        container: svcqc.dep_jumpy-copper-fossa
+        - /usr/bin/env sh .sqa/script.whiny-red-tzu.sh
+        container: svcqc.dep_homey-cinnabar-civet
 timeout: 600
