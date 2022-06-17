@@ -1,25 +1,16 @@
 config:
-  credentials:
-  - id: upv_im_id
-    password_var: IM_PASS
-    username_var: IM_USER
-  - id: incd_openstack_id
-    password_var: OPENSTACK_PASS
-    username_var: OPENSTACK_USER
+  credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: 1.7.0-alpha2
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/orviz/IM-sqaaas-test:
-      branch: master
-      repo: https://github.com/orviz/IM-sqaaas-test
 environment:
   JPL_DOCKERFORCEBUILD: enabled
 sqa_criteria:
-  SvcQC.Dep:
+  QC.Lic:
     repos:
-      github.com/orviz/IM-sqaaas-test im_client:
+      this_repo:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-blue-bombay.sh
-        container: svcqc.dep_scummy-gamboge-squirt
+        - licensee detect . --json
+        container: qc.lic_nippy-auburn-owl
 timeout: 600
