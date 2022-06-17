@@ -20,6 +20,6 @@ sqa_criteria:
     repos:
       github.com/orviz/IM-sqaaas-test im_client:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-cornflower-sponge.sh
-        container: svcqc.dep_sleazy-ochre-koala
+        - /usr/bin/env sh .sqa/script.tacky-blue-bombay.sh
+        container: svcqc.dep_scummy-gamboge-squirt
 timeout: 600

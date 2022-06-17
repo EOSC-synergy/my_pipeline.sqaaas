@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_sleazy-ochre-koala:
+  svcqc.dep_scummy-gamboge-squirt:
     entrypoint:
     - /bin/sleep
     - infinity
