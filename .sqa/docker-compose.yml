@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_homey-cinnabar-civet:
+  svcqc.dep_sleazy-ochre-koala:
     entrypoint:
     - /bin/sleep
     - infinity
