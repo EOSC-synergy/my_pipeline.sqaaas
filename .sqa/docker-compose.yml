@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_lousy-apricot-iguana:
+  svcqc.dep_tasty-aqua-leopard:
     entrypoint:
     - /bin/sleep
     - infinity
