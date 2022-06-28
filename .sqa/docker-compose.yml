@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_tasty-aqua-leopard:
+  svcqc.dep_sickly-burgundy-axolotl:
     entrypoint:
     - /bin/sleep
     - infinity

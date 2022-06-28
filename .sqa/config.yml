@@ -3,7 +3,7 @@ config:
   - id: upv_im_id
     password_var: IM_PASS
     username_var: IM_USER
-  - id: incd_openstack_id
+  - id: ifca_openstack_id
     password_var: OPENSTACK_PASS
     username_var: OPENSTACK_USER
   project_repos:
@@ -20,6 +20,6 @@ sqa_criteria:
     repos:
       github.com/orviz/IM-sqaaas-test im_client:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-magenta-angora.sh
-        container: svcqc.dep_tasty-aqua-leopard
+        - /usr/bin/env sh .sqa/script.shaggy-maroon-frise.sh
+        container: svcqc.dep_sickly-burgundy-axolotl
 timeout: 1800
