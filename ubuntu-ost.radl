@@ -1,0 +1,16 @@
+description ubuntu-openstack (
+    kind = 'images' and
+    short = 'Ubuntu (OpenStack).' and
+    content = 'Ubuntu (OpenStack).'
+)
+
+system front (
+    disk.0.os.name = 'linux' and
+    disk.0.image.url = 'ost://api.cloud.ifca.es/a309f7ac-2198-4ecf-9fb9-ff68c2197143'
+)
+
+system wn (
+    ec3_max_instances = 10 and # maximum number of working nodes in the cluster
+    disk.0.os.name = 'linux' and
+    disk.0.image.url = 'ost://api.cloud.ifca.es/a309f7ac-2198-4ecf-9fb9-ff68c2197143'
+)
