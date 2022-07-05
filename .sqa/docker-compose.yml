@@ -11,7 +11,7 @@ services:
     image: grycap/im-client:ec3
     volumes:
     - source: ./
-      target: /etc/ec3/templates
+      target: /sqaaas-build
       type: bind
-    working_dir: /
+    working_dir: /sqaaas-build
 version: '3.7'

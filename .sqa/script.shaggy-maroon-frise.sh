@@ -17,6 +17,8 @@ echo "*****************"
 cat /im/auth.dat
 echo "*****************"
 
+mkdir -p /etc/ec3/templates
+cp *.radl /etc/ec3/templates
 ec3 launch jepl_im_cluster kubernetes ubuntu-ost -a "/im/auth.dat" -u https://appsgrycap.i3m.upv.es:31443/im/ -y
 ec3 show jepl_im_cluster -r
 ec3 destroy jepl_im_cluster --force -y
