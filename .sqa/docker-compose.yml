@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_messy-cardinal-buffalo:
+  svcqc.dep_skanky-asparagus-dachshund:
     entrypoint:
     - /bin/sleep
     - infinity

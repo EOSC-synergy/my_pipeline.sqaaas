@@ -1,6 +1,4 @@
-(
-cp  github.com/orviz/IM-sqaaas-test/
-mkdir /im
+(mkdir /im
 cat <<EOF >> /im/auth.dat
 # InfrastructureManager auth
 type = InfrastructureManager; username = %s; password = %s
@@ -14,12 +12,11 @@ fi
 printf "$(cat /im/auth.dat)" "${IM_USER}" "${IM_PASS}" "${OPENSTACK_USER}" "${OPENSTACK_PASS}" > /im/auth.dat
 echo "Generated auth.dat file:"
 ls -l /im/auth.dat
-echo "Printing IM config file: github.com/orviz/IM-sqaaas-test/"
-cat github.com/orviz/IM-sqaaas-test/
 echo
+
 mkdir -p /etc/ec3/templates
-cp -rf templates/* /etc/ec3/templates
-ec3 launch sqaaas_ec3_cluster templates -a "/im/auth.dat" -u https://appsgrycap.i3m.upv.es:31443/im/ -y
+cp -rf github.com/orviz/IM-sqaaas-test//* /etc/ec3/templates
+ec3 launch sqaaas_ec3_cluster kubernetes ubuntu-ost -a "/im/auth.dat" -u https://appsgrycap.i3m.upv.es:31443/im/ -y
 ec3 show sqaaas_ec3_cluster -r
 ec3 destroy sqaaas_ec3_cluster --force -y
 )

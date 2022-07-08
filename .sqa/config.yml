@@ -14,6 +14,6 @@ sqa_criteria:
     repos:
       github.com/orviz/IM-sqaaas-test ec3_client:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-cerise-magpie.sh
-        container: svcqc.dep_messy-cardinal-buffalo
+        - /usr/bin/env sh .sqa/script.pasty-periwinkle-sheep.sh
+        container: svcqc.dep_skanky-asparagus-dachshund
 timeout: 1800
