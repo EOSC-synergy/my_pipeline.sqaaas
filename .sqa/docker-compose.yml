@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_skanky-asparagus-dachshund:
+  svcqc.dep_paltry-myrtle-discus:
     entrypoint:
     - /bin/sleep
     - infinity
