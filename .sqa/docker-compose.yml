@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_paltry-myrtle-discus:
+  svcqc.dep_cheeky-wisteria-crane:
     entrypoint:
     - /bin/sleep
     - infinity
