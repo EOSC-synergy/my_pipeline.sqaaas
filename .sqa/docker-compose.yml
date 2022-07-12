@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_cheeky-wisteria-crane:
+  svcqc.dep_ugly-chocolate-hyena:
     entrypoint:
     - /bin/sleep
     - infinity

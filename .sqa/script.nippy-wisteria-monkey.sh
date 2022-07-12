@@ -16,7 +16,7 @@ echo
 
 mkdir -p /etc/ec3/templates
 cp -rf github.com/orviz/IM-sqaaas-test/templates/* /etc/ec3/templates
-cat /etc/ec3/templates/kubernetes.radl
+cp templates/kubernetes.radl /etc/ec3/templates
 ec3 launch sqaaas_ec3_cluster kubernetes ubuntu-ost -a "/im/auth.dat" -u https://appsgrycap.i3m.upv.es:31443/im/ -y
 ec3 show sqaaas_ec3_cluster -r
 ec3 destroy sqaaas_ec3_cluster --force -y

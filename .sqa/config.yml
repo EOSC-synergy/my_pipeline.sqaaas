@@ -20,6 +20,6 @@ sqa_criteria:
     repos:
       github.com/orviz/IM-sqaaas-test ec3_client:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-burgundy-peccary.sh
-        container: svcqc.dep_cheeky-wisteria-crane
+        - /usr/bin/env sh .sqa/script.nippy-wisteria-monkey.sh
+        container: svcqc.dep_ugly-chocolate-hyena
 timeout: 1800
