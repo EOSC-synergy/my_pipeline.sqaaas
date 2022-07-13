@@ -8,7 +8,7 @@ config:
     username_var: OPENSTACK_USER
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.0
+      branch: 1.7.0-alpha2
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/orviz/IM-sqaaas-test:
       branch: ec3
@@ -20,6 +20,6 @@ sqa_criteria:
     repos:
       github.com/orviz/IM-sqaaas-test ec3_client:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-wisteria-monkey.sh
-        container: svcqc.dep_ugly-chocolate-hyena
+        - /usr/bin/env sh .sqa/script.freaky-brown-chicken.sh
+        container: svcqc.dep_sloppy-crimson-otter
 timeout: 1800

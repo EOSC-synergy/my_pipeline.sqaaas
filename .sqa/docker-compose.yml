@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_ugly-chocolate-hyena:
+  svcqc.dep_sloppy-crimson-otter:
     entrypoint:
     - /bin/sleep
     - infinity
