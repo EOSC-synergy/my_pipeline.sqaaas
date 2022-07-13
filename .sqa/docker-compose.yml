@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_sloppy-crimson-otter:
+  svcqc.dep_scaly-taupe-moorhen:
     entrypoint:
     - /bin/sleep
     - infinity
