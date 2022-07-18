@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_hazy-lavender-spoonbill:
+  svcqc.dep_skimpy-harlequin-cuscus:
     entrypoint:
     - /bin/sleep
     - infinity
