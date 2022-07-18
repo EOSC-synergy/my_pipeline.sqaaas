@@ -20,6 +20,6 @@ sqa_criteria:
     repos:
       github.com/orviz/IM-sqaaas-test ec3_client:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-grey-seahorse.sh
-        container: svcqc.dep_hazy-myrtle-capybara
+        - /usr/bin/env sh .sqa/script.grumpy-tan-ferret.sh
+        container: svcqc.dep_hazy-lavender-spoonbill
 timeout: 1800

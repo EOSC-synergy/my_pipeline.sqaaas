@@ -1,10 +1,17 @@
 services:
-  svcqc.dep_hazy-myrtle-capybara:
+  svcqc.dep_hazy-lavender-spoonbill:
+    entrypoint:
+    - /bin/sleep
+    - infinity
+    environment:
+    - OPENSTACK_USER
+    - OPENSTACK_PASS
+    - IM_USER
+    - IM_PASS
     image: grycap/im-client:ec3
     volumes:
     - source: ./
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
-    entrypoint: [/bin/sleep, infinity]
 version: '3.7'
