@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_skimpy-harlequin-cuscus:
+  svcqc.dep_snappy-heliotrope-robin:
     entrypoint:
     - /bin/sleep
     - infinity
