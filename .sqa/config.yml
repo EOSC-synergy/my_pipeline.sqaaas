@@ -8,7 +8,7 @@ config:
     username_var: OPENSTACK_USER
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.0
+      branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -17,6 +17,6 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-heliotrope-tetra.sh
-        container: svcqc.dep_snappy-heliotrope-robin
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.jumpy-olivine-flounder.sh
+        container: svcqc.dep_hasty-ivory-mayfly
+timeout: 5400

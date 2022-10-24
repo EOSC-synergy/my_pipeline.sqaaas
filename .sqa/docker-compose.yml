@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_snappy-heliotrope-robin:
+  svcqc.dep_hasty-ivory-mayfly:
     entrypoint:
     - /bin/sleep
     - infinity
